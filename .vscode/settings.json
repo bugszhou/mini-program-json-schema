@@ -4,6 +4,10 @@
     {
       "fileMatch": ["/app.json"],
       "url": "/src/wechatApp.json"
+    },
+    {
+      "fileMatch": ["/index.json"],
+      "url": "/src/wechatPage.json"
     }
   ]
 }

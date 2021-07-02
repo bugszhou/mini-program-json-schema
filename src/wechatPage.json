@@ -1,0 +1,110 @@
+{
+  "title": "JSON schema for WeChat Mini Program App configuration files",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Options": {
+      "type": "object",
+      "description": "非必填，页面中配置项",
+      "markdownDescription": "非必填，页面中配置项，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html)",
+      "properties": {
+        "navigationBarBackgroundColor": {
+          "type": "string",
+          "description": "HexColor，导航栏背景颜色，如 #000000",
+          "default": "#000000"
+        },
+        "navigationBarTextStyle": {
+          "type": "string",
+          "description": "导航栏标题颜色，仅支持 black / white",
+          "default": "white"
+        },
+        "navigationBarTitleText": {
+          "type": "string",
+          "description": "导航栏标题文字内容"
+        },
+        "navigationStyle": {
+          "type": "string",
+          "description": "导航栏样式，仅支持以下值：default 默认样式；custom 自定义导航栏，只保留右上角胶囊按钮。",
+          "default": "default"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "description": "窗口的背景色",
+          "default": "#ffffff"
+        },
+        "backgroundTextStyle": {
+          "type": "string",
+          "description": "下拉 loading 的样式，仅支持 dark / light",
+          "default": "dark"
+        },
+        "backgroundColorTop": {
+          "type": "string",
+          "description": "顶部窗口的背景色，仅 iOS 支持",
+          "default": "#ffffff"
+        },
+        "backgroundColorBottom": {
+          "type": "string",
+          "description": "底部窗口的背景色，仅 iOS 支持",
+          "default": "#ffffff"
+        },
+        "enablePullDownRefresh": {
+          "type": "boolean",
+          "description": "是否开启当前页面的下拉刷新。",
+          "default": "false"
+        },
+        "onReachBottomDistance": {
+          "type": "number",
+          "description": "页面上拉触底事件触发时距页面底部距离，单位为 px。",
+          "default": "50"
+        },
+        "pageOrientation": {
+          "type": "string",
+          "description": "屏幕旋转设置，支持 auto / portrait / landscape",
+          "default": "portrait"
+        },
+        "disableScroll": {
+          "type": "boolean",
+          "description": "设置为 true 则页面整体不能上下滚动。只在页面配置中有效，无法在 app.json 中设置",
+          "default": "false"
+        },
+        "usingComponents": {
+          "description": "非必填，页面自定义组件配置",
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "type": "string",
+              "description": "自定义组件，组件名: 组件路径",
+              "markdownDescription": "自定义组件，组件名: 组件路径，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#usingComponents)"
+            }
+          }
+        },
+        "initialRenderingCache": {
+          "type": "string",
+          "description": "页面初始渲染缓存配置"
+        },
+        "style": {
+          "description": "启用新版的组件样式",
+          "type": "string",
+          "default": "default"
+        },
+        "singlePage": {
+          "description": "非必填，单页模式相关配置",
+          "markdownDescription": "非必填，单页模式相关配置，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html#singlePage)",
+          "type": "object",
+          "properties": {
+            "navigationBarFit": {
+              "type": "string",
+              "description": "默认自动调整，若原页面是自定义导航栏，则为 float，否则为 squeezed;导航栏与页面的相交状态，值为 float 时表示导航栏浮在页面上，与页面相交；值为 squeezed 时表示页面被导航栏挤压，与页面不相交; (最低基础库：`2.12.0`)",
+              "markdownDescription": "默认自动调整，若原页面是自定义导航栏，则为 float，否则为 squeezed;导航栏与页面的相交状态，值为 float 时表示导航栏浮在页面上，与页面相交；值为 squeezed 时表示页面被导航栏挤压，与页面不相交; (最低基础库：`2.12.0`)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/Options"
+    }
+  ]
+}
