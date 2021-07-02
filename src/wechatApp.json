@@ -105,8 +105,8 @@
             },
             "custom": {
               "type": "boolean",
-              "description": "非必填，自定义 tabBar",
-              "markdownDescription": "非必填，自定义 tabBar，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
+              "description": "非必填，自定义 tabBar (最低基础库：`2.5.0`)",
+              "markdownDescription": "非必填，自定义 tabBar，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar) (最低基础库：`2.5.0`)",
               "default": "false"
             },
             "list": {
@@ -181,14 +181,14 @@
           "default": false
         },
         "functionalPages": {
-          "description": "非必填，是否启用插件功能页，默认关闭",
-          "markdownDescription": "非必填，是否启用插件功能页，默认关闭，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages)",
+          "description": "非必填，是否启用插件功能页，默认关闭 (最低基础库：`2.1.0`)",
+          "markdownDescription": "非必填，是否启用插件功能页，默认关闭，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages) (最低基础库：`2.1.0`)",
           "type": "boolean",
           "default": false
         },
         "subpackages": {
-          "description": "非必填，分包结构配置",
-          "markdownDescription": "非必填，分包结构配置，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages)",
+          "description": "非必填，分包结构配置 (最低基础库：`1.7.3`)",
+          "markdownDescription": "非必填，分包结构配置，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages) (最低基础库：`1.7.3`)",
           "type": "array",
           "default": [],
           "items": {
@@ -246,8 +246,8 @@
         },
         "workers": {
           "type": "string",
-          "description": "非必填，Worker 代码放置的目录",
-          "markdownDescription": "非必填，Worker 代码放置的目录，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#workers)"
+          "description": "非必填，Worker 代码放置的目录 (最低基础库：`1.9.9`)",
+          "markdownDescription": "非必填，Worker 代码放置的目录，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#workers) (最低基础库：`1.9.9`)"
         },
         "requiredBackgroundModes": {
           "type": "array",
@@ -259,8 +259,8 @@
           "markdownDescription": "非必填，需要在后台使用的能力，如「音乐播放」，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#requiredBackgroundModes)"
         },
         "plugins": {
-          "description": "非必填，使用到的插件",
-          "markdownDescription": "非必填，使用到的插件，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)",
+          "description": "非必填，使用到的插件 (最低基础库：`1.9.6`)",
+          "markdownDescription": "非必填，使用到的插件，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html) (最低基础库：`1.9.6`)",
           "type": "object",
           "patternProperties": {
             ".*": {
@@ -282,8 +282,8 @@
           }
         },
         "preloadRule": {
-          "description": "非必填，分包预下载规则",
-          "markdownDescription": "必填，分包预下载规则，版本号要求：2.3.0；[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html)",
+          "description": "非必填，分包预下载规则 (最低基础库：`2.3.0`)",
+          "markdownDescription": "必填，分包预下载规则，版本号要求：[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html) (最低基础库：`2.3.0`)",
           "type": "object",
           "patternProperties": {
             ".*": {
@@ -311,7 +311,7 @@
           }
         },
         "resizable": {
-          "description": "非必填，PC 小程序是否支持用户任意改变窗口大小（包括最大化窗口）；iPad 小程序是否支持屏幕旋转。默认关闭",
+          "description": "非必填，PC 小程序是否支持用户任意改变窗口大小（包括最大化窗口）；iPad 小程序是否支持屏幕旋转。默认关闭 (最低基础库：`2.3.0`)",
           "type": "boolean",
           "default": false
         },
@@ -327,7 +327,7 @@
           }
         },
         "permission": {
-          "description": "非必填，小程序接口权限相关设置",
+          "description": "非必填，小程序接口权限相关设置 (微信版本：`微信客户端 7.0.0`)",
           "type": "object",
           "properties": {
             "scope.userLocation": {
@@ -349,13 +349,13 @@
           "type": "string"
         },
         "style": {
-          "description": "非必填，指定使用升级后的weui样式",
-          "markdownDescription": "非必填，指定使用升级后的weui样式，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style)",
+          "description": "非必填，指定使用升级后的weui样式 (最低基础库：`2.8.0`)",
+          "markdownDescription": "非必填，指定使用升级后的weui样式，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style) (最低基础库：`2.8.0`)",
           "type": "string"
         },
         "useExtendedLib": {
-          "description": "非必填，指定需要引用的扩展库",
-          "markdownDescription": "非必填，指定需要引用的扩展库，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib)",
+          "description": "非必填，指定需要引用的扩展库 (最低基础库：`2.2.1`)",
+          "markdownDescription": "非必填，指定需要引用的扩展库，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib) (最低基础库：`2.2.1`)",
           "type": "object",
           "properties": {
             "kbone": {
@@ -371,8 +371,8 @@
           }
         },
         "entranceDeclare": {
-          "description": "非必填，微信消息用小程序打开",
-          "markdownDescription": "非必填，微信消息用小程序打开，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entranceDeclare)",
+          "description": "非必填，微信消息用小程序打开 (微信版本：`微信客户端7.0.9`)",
+          "markdownDescription": "非必填，微信消息用小程序打开，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entranceDeclare) (微信版本：`微信客户端7.0.9`)",
           "type": "object",
           "properties": {
             "locationMessage": {
@@ -391,8 +391,8 @@
           }
         },
         "darkmode": {
-          "description": "非必填，小程序支持 DarkMode",
-          "markdownDescription": "非必填，小程序支持 DarkMode，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#darkmode)",
+          "description": "非必填，小程序支持 DarkMode (最低基础库：`2.11.0`)",
+          "markdownDescription": "非必填，小程序支持 DarkMode，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#darkmode) (最低基础库：`2.11.0`)",
           "type": "boolean"
         },
         "themeLocation": {
@@ -401,13 +401,13 @@
           "type": "string"
         },
         "lazyCodeLoading": {
-          "description": "非必填，配置自定义组件代码按需注入",
-          "markdownDescription": "非必填，配置自定义组件代码按需注入，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#lazyCodeLoading)",
+          "description": "非必填，配置自定义组件代码按需注入 (最低基础库：`2.11.1`)",
+          "markdownDescription": "非必填，配置自定义组件代码按需注入，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#lazyCodeLoading) (最低基础库：`2.11.1`)",
           "type": "string"
         },
         "singlePage": {
-          "description": "非必填，单页模式相关配置",
-          "markdownDescription": "非必填，单页模式相关配置，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#singlePage)",
+          "description": "非必填，单页模式相关配置 (最低基础库：`2.12.0`)",
+          "markdownDescription": "非必填，单页模式相关配置，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#singlePage) (最低基础库：`2.12.0`)",
           "type": "object",
           "properties": {
             "lazyCodeLoading": {
