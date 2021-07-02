@@ -141,6 +141,7 @@
         },
         "networkTimeout": {
           "description": "非必填，网络超时时间",
+          "markdownDescription": "非必填，网络超时时间，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout)",
           "type": "object",
           "default": {},
           "properties": {
@@ -172,36 +173,139 @@
         },
         "debug": {
           "description": "非必填，是否开启 debug 模式，默认关闭",
+          "markdownDescription": "非必填，是否开启 debug 模式，默认关闭，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug)",
           "type": "boolean",
           "default": false
         },
         "functionalPages": {
           "description": "非必填，是否启用插件功能页，默认关闭",
+          "markdownDescription": "非必填，是否启用插件功能页，默认关闭，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages)",
           "type": "boolean",
           "default": false
         },
         "subpackages": {
           "description": "非必填，分包结构配置",
-          "type": "array"
+          "markdownDescription": "非必填，分包结构配置，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages)",
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "object",
+            "properties": {
+              "root": {
+                "type": "string",
+                "description": "分包根目录",
+                "markdownDescription": "分包根目录，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html)"
+              },
+              "name": {
+                "type": "string",
+                "description": "分包别名，分包预下载时可以使用",
+                "markdownDescription": "分包别名，分包预下载时可以使用，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html)"
+              },
+              "pages": {
+                "type": "array",
+                "description": "分包页面路径，相对与分包根目录",
+                "markdownDescription": "分包页面路径，相对与分包根目录，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html)",
+                "items": {
+                  "type": "string",
+                  "default": "pages/index/index"
+                }
+              },
+              "independent": {
+                "type": "boolean",
+                "description": "分包是否是独立分包",
+                "markdownDescription": "分包是否是独立分包，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html)"
+              },
+              "plugins": {
+                "description": "非必填，分包中使用到的插件",
+                "markdownDescription": "非必填，分包中使用到的插件，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)",
+                "type": "object",
+                "patternProperties": {
+                  ".*": {
+                    "description": "插件配置",
+                    "type": "object",
+                    "properties": {
+                      "version": {
+                        "type": "string",
+                        "description": "插件版本号",
+                        "markdownDescription": "必填，插件版本号，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)"
+                      },
+                      "provider": {
+                        "type": "string",
+                        "description": "插件的 appid ",
+                        "markdownDescription": "必填，插件的 appid ，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "workers": {
+          "type": "string",
           "description": "非必填，Worker 代码放置的目录",
-          "type": "string"
+          "markdownDescription": "非必填，Worker 代码放置的目录，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#workers)"
         },
         "requiredBackgroundModes": {
-          "description": "非必填，需要在后台使用的能力，如「音乐播放」",
           "type": "array",
           "items": {
-            "type": "string"
-          }
+            "type": "string",
+            "enum": ["audio", "location"]
+          },
+          "description": "非必填，需要在后台使用的能力，如「音乐播放」",
+          "markdownDescription": "非必填，需要在后台使用的能力，如「音乐播放」，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#requiredBackgroundModes)"
         },
         "plugins": {
           "description": "非必填，使用到的插件",
-          "type": "object"
+          "markdownDescription": "非必填，使用到的插件，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)",
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "description": "插件配置",
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "description": "插件版本号",
+                  "markdownDescription": "必填，插件版本号，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)"
+                },
+                "provider": {
+                  "type": "string",
+                  "description": "插件的 appid ",
+                  "markdownDescription": "必填，插件的 appid ，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)"
+                }
+              }
+            }
+          }
         },
         "preloadRule": {
           "description": "非必填，分包预下载规则",
-          "type": "object"
+          "markdownDescription": "必填，分包预下载规则，版本号要求：2.3.0；[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html)",
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "description": "分包中【name】字段值",
+              "type": "object",
+              "properties": {
+                "network": {
+                  "type": "string",
+                  "description": "在指定网络下预下载，可选值为：all: 不限网络；wifi: 仅wifi下预下载",
+                  "markdownDescription": "必填，插件版本号，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)",
+                  "enum": ["all", "wifi"],
+                  "default": "all"
+                },
+                "packages": {
+                  "type": "array",
+                  "description": "分包中【name】字段值，进入页面后预下载分包的 root 或 name。__APP__ 表示主包",
+                  "markdownDescription": "分包中【name】字段值，进入页面后预下载分包的 root 或 name。__APP__ 表示主包 ，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html)",
+                  "items": {
+                    "type": "string"
+                  },
+                  "default": []
+                }
+              }
+            }
+          }
         },
         "resizable": {
           "description": "非必填，PC 小程序是否支持用户任意改变窗口大小（包括最大化窗口）；iPad 小程序是否支持屏幕旋转。默认关闭",

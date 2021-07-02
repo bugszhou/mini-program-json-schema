@@ -3,7 +3,7 @@
   "json.schemas": [
     {
       "fileMatch": ["/app.json"],
-      "url": "./src/wechatApp.json"
+      "url": "/src/wechatApp.json"
     }
   ]
 }
