@@ -1,5 +1,5 @@
 {
-  "singlePage": {
-    
+  "componentGenerics": {
+    "demo": true
   }
 }

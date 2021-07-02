@@ -97,6 +97,37 @@
               "markdownDescription": "默认自动调整，若原页面是自定义导航栏，则为 float，否则为 squeezed;导航栏与页面的相交状态，值为 float 时表示导航栏浮在页面上，与页面相交；值为 squeezed 时表示页面被导航栏挤压，与页面不相交; (最低基础库：`2.12.0`)"
             }
           }
+        },
+        "componentGenerics": {
+          "description": "非必填，声明抽象组件 (最低基础库：`1.9.6`)",
+          "type": "object",
+          "oneOf": [
+            {
+              "patternProperties": {
+                ".*": {
+                  "type": "boolean",
+                  "description": "声明组件是否抽象组件",
+                  "markdownDescription": "声明组件是否抽象组件，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/generics.html) (最低基础库：`1.9.6`)"
+                }
+              }
+            },
+            {
+              "patternProperties": {
+                ".*": {
+                  "type": "object",
+                  "description": "配置抽象组件的默认组件等信息",
+                  "markdownDescription": "配置抽象组件的默认组件等信息，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/generics.html) (最低基础库：`1.9.6`)",
+                  "properties": {
+                    "default": {
+                      "type": "string",
+                      "description": "默认组件路径",
+                      "markdownDescription": "默认组件路径"
+                    }
+                  }
+                }
+              }
+            }
+          ]
         }
       }
     }
