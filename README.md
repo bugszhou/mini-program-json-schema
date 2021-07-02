@@ -11,7 +11,7 @@
   "json.schemas": [
     {
       "fileMatch": ["/app.json"],
-      "url": "/src/wechatApp.json"
+      "url": "https://raw.githubusercontent.com/bugszhou/mini-program-json-schema/main/src/wechatApp.json"
     }
   ]
 }

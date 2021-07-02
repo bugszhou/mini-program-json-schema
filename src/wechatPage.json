@@ -23,7 +23,7 @@
         },
         "navigationStyle": {
           "type": "string",
-          "description": "导航栏样式，仅支持以下值：default 默认样式；custom 自定义导航栏，只保留右上角胶囊按钮。",
+          "description": "导航栏样式，仅支持以下值：default 默认样式；custom 自定义导航栏，只保留右上角胶囊按钮。 (兼容性：`iOS/Android 微信客户端 7.0.0，Windows 微信客户端不支持`)",
           "default": "default"
         },
         "backgroundColor": {
@@ -38,12 +38,12 @@
         },
         "backgroundColorTop": {
           "type": "string",
-          "description": "顶部窗口的背景色，仅 iOS 支持",
+          "description": "顶部窗口的背景色，仅 iOS 支持 (最低版本：`微信客户端 6.5.16`)",
           "default": "#ffffff"
         },
         "backgroundColorBottom": {
           "type": "string",
-          "description": "底部窗口的背景色，仅 iOS 支持",
+          "description": "底部窗口的背景色，仅 iOS 支持 (最低版本：`微信客户端 6.5.16`)",
           "default": "#ffffff"
         },
         "enablePullDownRefresh": {
@@ -58,7 +58,7 @@
         },
         "pageOrientation": {
           "type": "string",
-          "description": "屏幕旋转设置，支持 auto / portrait / landscape",
+          "description": "屏幕旋转设置，支持 auto / portrait / landscape (最低基础库：`2.4.0 (auto) / 2.5.0 (landscape)`)",
           "default": "portrait"
         },
         "disableScroll": {
@@ -67,7 +67,7 @@
           "default": "false"
         },
         "usingComponents": {
-          "description": "非必填，页面自定义组件配置",
+          "description": "非必填，页面自定义组件配置 (最低基础库：`1.6.3`)",
           "type": "object",
           "patternProperties": {
             ".*": {
@@ -79,10 +79,10 @@
         },
         "initialRenderingCache": {
           "type": "string",
-          "description": "页面初始渲染缓存配置"
+          "description": "页面初始渲染缓存配置 (最低基础库：`2.11.1`)"
         },
         "style": {
-          "description": "启用新版的组件样式",
+          "description": "启用新版的组件样式 (最低基础库：`2.10.2`)",
           "type": "string",
           "default": "default"
         },
