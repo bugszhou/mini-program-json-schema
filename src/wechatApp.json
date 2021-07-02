@@ -141,8 +141,34 @@
         },
         "networkTimeout": {
           "description": "非必填，网络超时时间",
-          "type": "number",
-          "default": 10
+          "type": "object",
+          "default": {},
+          "properties": {
+            "request": {
+              "type": "number",
+              "description": "wx.request 的超时时间，单位：毫秒",
+              "markdownDescription": "wx.request 的超时时间，单位：毫秒，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout)",
+              "default": 60000
+            },
+            "connectSocket": {
+              "type": "number",
+              "description": "wx.connectSocket 的超时时间，单位：毫秒",
+              "markdownDescription": "wx.connectSocket 的超时时间，单位：毫秒，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout)",
+              "default": 60000
+            },
+            "uploadFile": {
+              "type": "number",
+              "description": "wx.uploadFile 的超时时间，单位：毫秒",
+              "markdownDescription": "wx.uploadFile 的超时时间，单位：毫秒，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout)",
+              "default": 60000
+            },
+            "downloadFile": {
+              "type": "number",
+              "description": "wx.downloadFile 的超时时间，单位：毫秒",
+              "markdownDescription": "wx.downloadFile 的超时时间，单位：毫秒，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout)",
+              "default": 60000
+            }
+          }
         },
         "debug": {
           "description": "非必填，是否开启 debug 模式，默认关闭",
