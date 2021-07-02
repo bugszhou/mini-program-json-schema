@@ -11,5 +11,10 @@
   },
   "networkTimeout": {
     
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": ""
+    }
   }
 }

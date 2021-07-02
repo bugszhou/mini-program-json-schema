@@ -7,10 +7,12 @@
       "properties": {
         "entryPagePath": {
           "description": "非必填，小程序默认启动首页",
+          "markdownDescription": "非必填，小程序默认启动首页，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entryPagePath)",
           "type": "string"
         },
         "window": {
           "description": "非必填，全局的默认窗口表现",
+          "markdownDescription": "非必填，全局的默认窗口表现，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window)",
           "type": "object",
           "properties": {
             "navigationBarBackgroundColor": {
@@ -71,45 +73,46 @@
         },
         "tabBar": {
           "description": "非必填，底部 tab 栏的表现",
+          "markdownDescription": "非必填，底部 tab 栏的表现，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
           "type": "object",
           "properties": {
             "color": {
               "type": "string",
               "description": "必填，HexColor格式，tab 上的文字默认颜色，仅支持十六进制颜色",
-              "markdownDescription": "必填，HexColor格式，tab 上的文字默认颜色，仅支持十六进制颜色，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+              "markdownDescription": "必填，HexColor格式，tab 上的文字默认颜色，仅支持十六进制颜色，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
             },
             "selectedColor": {
               "type": "string",
               "description": "必填，HexColor格式，tab 上的文字选中时的颜色，仅支持十六进制颜色",
-              "markdownDescription": "必填，HexColor格式，tab 上的文字选中时的颜色，仅支持十六进制颜色，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+              "markdownDescription": "必填，HexColor格式，tab 上的文字选中时的颜色，仅支持十六进制颜色，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
             },
             "backgroundColor": {
               "type": "string",
               "description": "必填，HexColor格式，tab 的背景色，仅支持十六进制颜色",
-              "markdownDescription": "必填，HexColor格式，tab 的背景色，仅支持十六进制颜色，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+              "markdownDescription": "必填，HexColor格式，tab 的背景色，仅支持十六进制颜色，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
             },
             "borderStyle": {
               "type": "string",
               "description": "非必填，tabbar 上边框的颜色， 仅支持 black / white",
-              "markdownDescription": "非必填，tabbar 上边框的颜色， 仅支持 black / white，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar",
+              "markdownDescription": "非必填，tabbar 上边框的颜色， 仅支持 black / white，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
               "default": "black"
             },
             "position": {
               "type": "string",
               "description": "非必填，tabBar 的位置，仅支持 bottom / top",
-              "markdownDescription": "非必填，tabBar 的位置，仅支持 bottom / top，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar",
+              "markdownDescription": "非必填，tabBar 的位置，仅支持 bottom / top，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
               "default": "bottom"
             },
             "custom": {
               "type": "boolean",
               "description": "非必填，自定义 tabBar",
-              "markdownDescription": "非必填，自定义 tabBar，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar",
+              "markdownDescription": "非必填，自定义 tabBar，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
               "default": "false"
             },
             "list": {
               "type": "array",
               "description": "必填，tab 的列表，详见 list 属性说明，最少 2 个、最多 5 个 tab",
-              "markdownDescription": "必填，tab 的列表，详见 list 属性说明，最少 2 个、最多 5 个 tab，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar",
+              "markdownDescription": "必填，tab 的列表，详见 list 属性说明，最少 2 个、最多 5 个 tab，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
               "default": [],
               "items": {
                 "type": "object",
@@ -117,22 +120,22 @@
                   "pagePath": {
                     "type": "string",
                     "description": "必填，页面路径，必须在 pages 中先定义",
-                    "markdownDescription": "必填，页面路径，必须在 pages 中先定义，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+                    "markdownDescription": "必填，页面路径，必须在 pages 中先定义，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
                   },
                   "text": {
                     "type": "string",
                     "description": "必填，tab 上按钮文字",
-                    "markdownDescription": "必填，tab 上按钮文字，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+                    "markdownDescription": "必填，tab 上按钮文字，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
                   },
                   "iconPath": {
                     "type": "string",
                     "description": "非必填，图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。当 position 为 top 时，不显示 icon。",
-                    "markdownDescription": "非必填，图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。当 position 为 top 时，不显示 icon，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+                    "markdownDescription": "非必填，图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。当 position 为 top 时，不显示 icon，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
                   },
                   "selectedIconPath": {
                     "type": "string",
                     "description": "非必填，选中时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。当 position 为 top 时，不显示 icon。",
-                    "markdownDescription": "非必填，选中时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。当 position 为 top 时，不显示 icon。当 position 为 top 时，不显示 icon，详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar"
+                    "markdownDescription": "非必填，选中时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。当 position 为 top 时，不显示 icon。当 position 为 top 时，不显示 icon，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)"
                   }
                 }
               }
@@ -314,43 +317,104 @@
         },
         "usingComponents": {
           "description": "非必填，全局自定义组件配置",
-          "type": "object"
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "type": "string",
+              "description": "自定义组件，组件名: 组件路径",
+              "markdownDescription": "自定义组件，组件名: 组件路径，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#usingComponents)"
+            }
+          }
         },
         "permission": {
           "description": "非必填，小程序接口权限相关设置",
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "scope.userLocation": {
+              "type": "object",
+              "description": "位置相关权限声明",
+              "markdownDescription": "位置相关权限声明，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#permission)",
+              "properties": {
+                "desc": {
+                  "type": "string",
+                  "description": "小程序获取权限时展示的接口用途说明。最长 30 个字符"
+                }
+              }
+            }
+          }
         },
         "sitemapLocation": {
           "description": "必填，指明 sitemap.json 的位置",
+          "markdownDescription": "必填，指明 sitemap.json 的位置，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#sitemapLocation)",
           "type": "string"
         },
         "style": {
           "description": "非必填，指定使用升级后的weui样式",
+          "markdownDescription": "非必填，指定使用升级后的weui样式，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style)",
           "type": "string"
         },
         "useExtendedLib": {
           "description": "非必填，指定需要引用的扩展库",
-          "type": "object"
+          "markdownDescription": "非必填，指定需要引用的扩展库，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib)",
+          "type": "object",
+          "properties": {
+            "kbone": {
+              "description": "非必填，kbone: 多端开发框架",
+              "markdownDescription": "非必填，kbone: 多端开发框架，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/extended/kbone/)",
+              "type": "boolean"
+            },
+            "weui": {
+              "description": "非必填，weui: WeUI 组件库",
+              "markdownDescription": "非必填，weui: WeUI 组件库，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/extended/weui/)",
+              "type": "boolean"
+            }
+          }
         },
         "entranceDeclare": {
           "description": "非必填，微信消息用小程序打开",
-          "type": "object"
+          "markdownDescription": "非必填，微信消息用小程序打开，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entranceDeclare)",
+          "type": "object",
+          "properties": {
+            "locationMessage": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "default": "pages/index/index"
+                },
+                "query": {
+                  "type": "string",
+                  "default": "key=value"
+                }
+              }
+            }
+          }
         },
         "darkmode": {
           "description": "非必填，小程序支持 DarkMode",
+          "markdownDescription": "非必填，小程序支持 DarkMode，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#darkmode)",
           "type": "boolean"
         },
         "themeLocation": {
           "description": "非必填，指明 theme.json 的位置，darkmode为true为必填",
+          "markdownDescription": "非必填，指明 theme.json 的位置，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#themeLocation)",
           "type": "string"
         },
         "lazyCodeLoading": {
           "description": "非必填，配置自定义组件代码按需注入",
+          "markdownDescription": "非必填，配置自定义组件代码按需注入，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#lazyCodeLoading)",
           "type": "string"
         },
         "singlePage": {
-          "description": "单页模式相关配置",
-          "type": "object"
+          "description": "非必填，单页模式相关配置",
+          "markdownDescription": "非必填，单页模式相关配置，darkmode为true为必填，[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#singlePage)",
+          "type": "object",
+          "properties": {
+            "lazyCodeLoading": {
+              "type": "string",
+              "default": "requiredComponents"
+            }
+          }
         }
       }
     }
@@ -364,7 +428,7 @@
       "properties": {
         "pages": {
           "description": "必填，主包页面路径，第一个路径为首页",
-          "markdownDescription": "必填，主包页面路径，第一个路径为首页。详情查看：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window",
+          "markdownDescription": "必填，主包页面路径，第一个路径为首页。[点击查看文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window)",
           "type": "array",
           "items": {
             "type": "string"
